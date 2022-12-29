@@ -165,7 +165,7 @@ letter-spacing: 3px;
 }
 
 .container:hover{
-    border: 2px dotted yellow;
+    /* border: 2px dotted yellow; */
     transform: scale(1.1);
 }
 
@@ -281,7 +281,7 @@ footer{
     padding: .5em 0em;
   }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .container{
         grid-template-columns: auto auto;
     }
@@ -296,14 +296,22 @@ footer{
        
     }
 
+    footer{
+        grid-template-columns: auto;
+        gap: 2em;
+    }
+
     .nav{
-        /* display: none; */
+        display: none;
+        gap: 1em;
         position: fixed;
         flex-direction: column;
         align-items: center;
         right: 0;
-        top: 100px;
+        top: 94px;
         width: 100%;
+        background: #dfe2f1;
+        text-align: center;
     }
 
     .active{
