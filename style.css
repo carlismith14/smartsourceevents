@@ -1,0 +1,312 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;500&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    /* overflow: hidden; */
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root{
+    --lightgray:#d8dce1;
+    --navy:#003764;
+    --babyblue:#9ab6d3;
+    --lightblue2: #dfe2f1;
+
+}
+
+
+
+/* nav section */
+
+header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .25em 4em;
+    z-index: 100;
+    background:white;
+
+
+}
+
+.header__logo{
+    width: 126px;
+
+}
+
+.nav{
+    display: flex;
+    gap: 3em;
+}
+
+
+.nav__li{
+    list-style: none;
+}
+
+.nav__a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--navy);
+    text-transform: uppercase;
+    
+}
+
+.nav__a:hover{
+    color: var(--babyblue);
+}
+
+
+
+
+
+
+.header__nav-toggle{
+    display: none;
+}
+
+
+
+nav  li a,
+nav  li a:after,
+nav  li a:before {
+  transition: all .5s;
+}
+
+nav.stroke  li a {
+  position: relative;
+}
+nav.stroke  li a:after {
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ' ';
+  color: transparent;
+  background: #aaa;
+  height: .125rem;
+}
+nav.stroke  li a:hover:after {
+  width: 100%;
+}
+
+
+/* hero image */
+
+.hero_img{
+    background: url("https://www.hospitalitynet.org/picture/xxl_153134675.jpg?t=1637745498");
+    height: 25vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 40%;
+    opacity: 0.8;
+
+    position: relative;
+}
+
+.upcoming{
+    position: absolute;
+    top: 20%;
+    color: white;
+    font-size: 3em;
+}
+
+
+
+/* heading  */
+
+
+.heading{
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.heading__months{
+font-size: 41px;
+font-weight: 700;
+color: var(--navy);
+letter-spacing: 3px;
+}
+
+.arrow{
+    /* padding-top: .5em; */
+    font-size: 3rem;
+    font-weight: 100;
+    color: var(--lightblue2);
+}
+
+.upcoming{
+    width: 100%;
+    text-align: center;
+}
+
+/* events */
+
+.container{
+    margin-top:10rem;
+    display: grid;
+    /* gap: 1rem; */
+    /* border: 2px solid green; */
+    width: 80%;
+    margin: auto;
+    grid-template-columns: auto auto auto;
+    margin-top: 1em;
+}
+
+.container:hover{
+    border: 2px dotted yellow;
+    transform: scale(1.1);
+}
+
+.date{
+    background: var(--babyblue);
+    color: white;
+    padding: 1rem 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+ 
+}
+
+.event{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--lightgray);
+    padding: 0em 1em;
+}
+
+.event h5 {
+    color: var(--navy);
+    font-family: 'Archivo Black', sans-serif;
+}
+
+
+
+.event p {
+    padding: 0;
+    font-size: x-small;
+    display: inline;
+    font-style: italic;
+}
+
+
+.cta{
+
+    font-size: x-small;
+    background: var(--babyblue);
+    display: flex;
+    align-items: center;
+    /* padding: 1em; */
+    text-align: center;
+    justify-content: center;
+}
+
+.cta p {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bolder;
+    font-size: .6em;
+}
+
+/* events */
+.events{
+    margin-bottom: 3em;
+}
+
+/* footer  */
+
+
+
+
+
+footer{
+    min-height: 35vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: var(--lightblue2);
+    color: var(--navy);
+    padding: 4em 0em;
+}
+
+.footer__cta{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+
+.footer__text{
+    font-size: 14px ;
+}
+
+.footer__btn{
+    border: 0;
+    color: white;
+    background: var(--navy);
+    padding: .3em 3em;
+}
+
+
+.footer__contact{
+    font-weight: 800;
+}
+
+
+
+
+/* copyright */
+
+.copyright {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 6em;
+    font-size: small;
+    background: var(--navy);
+    color: white;
+    padding: .5em 0em;
+  }
+
+@media (max-width: 600px) {
+    .container{
+        grid-template-columns: auto auto;
+    }
+
+    .cta{
+        grid-column: 1 / -1;
+    }
+
+
+    .header__nav-toggle{
+        display: block;
+       
+    }
+
+    .nav{
+        /* display: none; */
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        right: 0;
+        top: 100px;
+        width: 100%;
+    }
+
+    .active{
+        display: block;
+    }
+}
